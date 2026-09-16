@@ -1,6 +1,9 @@
-# LungTrainers — Medical Opportunity
+# LungTrainers — Presentación estratégica inicial
 
-Presentación web ejecutiva preparada por CPDA Studios.
+Presentación web ejecutiva preparada por CPDA Studios. La portada permite elegir entre dos rutas independientes:
+
+- sistemas médicos institucionales, centrados en los modelos MD2 y MD3;
+- venta directa, centrada en los asistentes individuales para respiración y su sistema de reposición.
 
 ## Desarrollo local
 

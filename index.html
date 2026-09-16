@@ -8,9 +8,9 @@
   <title>LungTrainers — Medical Opportunity</title>
   <link rel="canonical" href="https://cpdastudios.com/lungtrainers/">
   <link rel="preload" as="image" href="assets/official/md3-series4.webp">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
-<body>
+<body class="presentation-mode">
   <div class="page-noise" aria-hidden="true"></div>
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="Inicio">
@@ -19,13 +19,15 @@
     <nav aria-label="Navegación principal">
       <a href="#oportunidad">Oportunidad</a>
       <a href="#evidencia">Evidencia</a>
+      <a href="#producto">Producto</a>
       <a href="#estrategia">Estrategia</a>
+      <a href="#prioridades">Prioridades</a>
     </nav>
-    <a class="header-cta" href="#proximo-paso">Próximo paso</a>
+    <button class="header-cta index-toggle" type="button" aria-expanded="false" aria-controls="slide-index">Índice</button>
   </header>
 
   <main>
-    <section class="hero" id="inicio">
+    <section class="hero" id="inicio" data-slide data-title="Oportunidad médica">
       <div class="hero-copy reveal">
         <p class="eyebrow"><span></span> Investigación estratégica · Septiembre 2026</p>
         <h1>Una oportunidad médica con potencial de <em>escala.</em></h1>
@@ -48,23 +50,23 @@
           <img src="assets/official/md3-series4.webp" alt="LungTrainer MD-3 Series 4" width="1480" height="1080">
         </div>
         <div class="evidence-badge">
-          <small>FDA 510(k)</small>
+          <small>Autorización 510(k)</small>
           <strong>K221058</strong>
-          <span>MD2 · MD3</span>
+          <span>Modelos MD2 · MD3</span>
         </div>
         <div class="visual-caption">Producto real · Imagen oficial de LungTrainers</div>
       </div>
     </section>
 
     <section class="signal-strip" aria-label="Señales principales">
-      <div><strong>FDA cleared</strong><span>Base regulatoria real</span></div>
+      <div><strong>Autorización 510(k)</strong><span>Base regulatoria real</span></div>
       <i></i>
       <div><strong>Ensayo Mayo Clinic</strong><span>Investigación específica en curso</span></div>
       <i></i>
-      <div><strong>Made in USA</strong><span>Activo comercial diferenciador</span></div>
+      <div><strong>Fabricado en Estados Unidos</strong><span>Activo comercial diferenciador</span></div>
     </section>
 
-    <section class="section opportunity" id="oportunidad">
+    <section class="section opportunity" id="oportunidad" data-slide data-title="Oportunidad y mercado">
       <div class="section-heading reveal">
         <p class="eyebrow"><span></span> El punto de entrada</p>
         <h2>La bronquiectasia concentra la señal más clara.</h2>
@@ -73,22 +75,22 @@
 
       <div class="metric-grid" id="hallazgos">
         <article class="metric-card reveal">
-          <div class="metric-number">≈500K</div>
-          <h3>personas en EE. UU.</h3>
+          <div class="metric-number">≈500 mil</div>
+          <h3>personas en Estados Unidos</h3>
           <p>Estimación publicada de personas que viven con bronquiectasia. Representa contexto de prevalencia, no el mercado automáticamente disponible.</p>
-          <a href="https://pubmed.ncbi.nlm.nih.gov/40293759/" target="_blank" rel="noopener">JAMA, 2025 <span>↗</span></a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/40293759/" target="_blank" rel="noopener">Journal of the American Medical Association, 2025 <span>↗</span></a>
         </article>
         <article class="metric-card accent reveal" data-delay="80">
-          <div class="metric-number">US$309.2M</div>
+          <div class="metric-number">309.2 millones de dólares</div>
           <h3>en un trimestre</h3>
-          <p>Ingresos globales reportados por Insmed para BRINSUPRI en Q2 2026: una señal concreta de actividad comercial dentro de esta enfermedad.</p>
-          <a href="https://investor.insmed.com/2026-08-06-Insmed-Reports-Second-Quarter-2026-Financial-Results-and-Provides-Business-Update" target="_blank" rel="noopener">Insmed, Q2 2026 <span>↗</span></a>
+          <p>Ingresos globales reportados por Insmed para BRINSUPRI en el segundo trimestre de 2026: una señal concreta de actividad comercial dentro de esta enfermedad.</p>
+          <a href="https://investor.insmed.com/2026-08-06-Insmed-Reports-Second-Quarter-2026-Financial-Results-and-Provides-Business-Update" target="_blank" rel="noopener">Insmed, segundo trimestre de 2026 <span>↗</span></a>
         </article>
         <article class="metric-card reveal" data-delay="160">
-          <div class="metric-number">≈16M</div>
-          <h3>con EPOC diagnosticada</h3>
+          <div class="metric-number">≈16 millones</div>
+          <h3>con EPOC (enfermedad pulmonar obstructiva crónica) diagnosticada</h3>
           <p>Una segunda población de gran tamaño que merece evaluarse por segmentos y necesidades concretas, sin convertirla en una promesa universal.</p>
-          <a href="https://www.cdc.gov/cdi/indicator-definitions/chronic-obstructive-pulmonary-disease.html" target="_blank" rel="noopener">CDC <span>↗</span></a>
+          <a href="https://www.cdc.gov/cdi/indicator-definitions/chronic-obstructive-pulmonary-disease.html" target="_blank" rel="noopener">CDC (Centros para el Control y la Prevención de Enfermedades) <span>↗</span></a>
         </article>
       </div>
 
@@ -98,7 +100,7 @@
       </div>
     </section>
 
-    <section class="section evidence" id="evidencia">
+    <section class="section evidence" id="evidencia" data-slide data-title="Evidencia médica">
       <div class="section-heading split-heading reveal">
         <div>
           <p class="eyebrow"><span></span> Activos comprobables</p>
@@ -113,11 +115,11 @@
           <div class="panel-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48"><path d="M24 5 8 11v11c0 10.2 6.7 17.4 16 21 9.3-3.6 16-10.8 16-21V11L24 5Z"/><path d="m17 24 5 5 10-11"/></svg>
           </div>
-          <p class="panel-kicker">FDA 510(k) · K221058</p>
+          <p class="panel-kicker">FDA (Administración de Alimentos y Medicamentos de Estados Unidos) · 510(k) K221058</p>
           <h3>MD2 y MD3: autorización específica</h3>
-          <p>Ejercicio espiratorio, presión positiva espiratoria —PEP— y asistencia en la eliminación de moco para pacientes desde los 12 años, en clínica o domicilio, bajo prescripción.</p>
-          <div class="precision-box"><strong>Lenguaje correcto:</strong> “FDA cleared”. La documentación no respalda llamar “FDA approved” a toda la línea.</div>
-          <a class="text-link" href="https://www.accessdata.fda.gov/cdrh_docs/pdf22/K221058.pdf" target="_blank" rel="noopener">Ver carta e indicaciones FDA <span>↗</span></a>
+          <p>Ejercicio espiratorio, PEP (presión espiratoria positiva) y asistencia en la eliminación de moco para pacientes desde los 12 años, en clínica o domicilio, bajo prescripción.</p>
+          <div class="precision-box"><strong>Lenguaje correcto:</strong> “FDA cleared” (autorizado por la Administración de Alimentos y Medicamentos de Estados Unidos). La documentación no respalda llamar “FDA approved” (aprobado por esa administración) a toda la línea.</div>
+          <a class="text-link" href="https://www.accessdata.fda.gov/cdrh_docs/pdf22/K221058.pdf" target="_blank" rel="noopener">Ver carta e indicaciones de la FDA (Administración de Alimentos y Medicamentos de Estados Unidos) <span>↗</span></a>
         </article>
 
         <article class="evidence-panel reveal" data-delay="100">
@@ -133,19 +135,22 @@
         </article>
       </div>
 
+    </section>
+
+    <section class="section professional-context" id="contexto-profesional" data-slide data-title="Contexto profesional">
       <div class="guideline-card reveal">
         <div>
           <p class="eyebrow"><span></span> El contexto profesional</p>
           <h3>Las guías recomiendan enseñar técnicas de eliminación de secreciones.</h3>
         </div>
         <div>
-          <p>La guía ERS 2025 hace una recomendación fuerte para que los pacientes con bronquiectasia aprendan estas técnicas, aunque califica la certeza de la evidencia como muy baja y no establece una técnica superior.</p>
-          <a class="text-link" href="https://publications.ersnet.org/content/erj/66/6/2501126" target="_blank" rel="noopener">Guía ERS 2025 <span>↗</span></a>
+          <p>La guía de la ERS (Sociedad Respiratoria Europea) de 2025 hace una recomendación fuerte para que los pacientes con bronquiectasia aprendan estas técnicas, aunque califica la certeza de la evidencia como muy baja y no establece una técnica superior.</p>
+          <a class="text-link" href="https://publications.ersnet.org/content/erj/66/6/2501126" target="_blank" rel="noopener">Guía ERS (Sociedad Respiratoria Europea), 2025 <span>↗</span></a>
         </div>
       </div>
     </section>
 
-    <section class="section product-section">
+    <section class="section product-section" id="producto" data-slide data-title="Producto y valor">
       <div class="section-heading reveal">
         <p class="eyebrow"><span></span> El reto de valor</p>
         <h2>El producto debe convertirse en una solución fácil de elegir.</h2>
@@ -156,11 +161,11 @@
         <div class="product-gallery">
           <figure class="main-product">
             <img src="assets/official/md2-series3.webp" alt="LungTrainer MD-2 Series 3" loading="lazy" width="1480" height="1080">
-            <figcaption><strong>MD-2 Series 3</strong><span>US$499 anunciado</span></figcaption>
+            <figcaption><strong>MD-2 Series 3</strong><span>499 dólares estadounidenses anunciados</span></figcaption>
           </figure>
           <figure class="secondary-product">
             <img src="assets/official/md3-series3.webp" alt="LungTrainer MD-3 Series 3" loading="lazy" width="1480" height="1080">
-            <figcaption><strong>MD-3 Series 3</strong><span>US$642 anunciado</span></figcaption>
+            <figcaption><strong>MD-3 Series 3</strong><span>642 dólares estadounidenses anunciados</span></figcaption>
           </figure>
         </div>
         <div class="value-stack">
@@ -183,21 +188,24 @@
         </div>
       </div>
 
+    </section>
+
+    <section class="section price-slide" id="competencia" data-slide data-title="Contexto competitivo">
       <div class="price-context reveal">
         <div class="price-copy">
           <p class="eyebrow"><span></span> Contexto competitivo</p>
           <h3>La diferencia de precio debe convertirse en diferencia percibida.</h3>
-          <p>Referencias públicas: EMST150 anuncia US$54,99; The Breather, US$47,95; los modelos MD se anuncian entre US$499 y US$1.200. No son productos clínicamente equivalentes, pero sí compiten por presupuesto y atención.</p>
+          <p>Referencias públicas: el modelo EMST150 anuncia 54,99 dólares estadounidenses; The Breather, 47,95 dólares estadounidenses; los modelos LungTrainer se anuncian entre 499 y 1.200 dólares estadounidenses. No son productos clínicamente equivalentes, pero sí compiten por presupuesto y atención.</p>
         </div>
         <div class="price-bars" aria-label="Comparación ilustrativa de precios publicados">
-          <div class="price-row"><span>Entrenadores portátiles</span><div class="bar"><i style="--w:8%"></i></div><strong>≈US$50</strong></div>
-          <div class="price-row"><span>LungTrainer MD</span><div class="bar"><i class="accent-bar" style="--w:100%"></i></div><strong>US$499–1.200</strong></div>
+          <div class="price-row"><span>Entrenadores portátiles</span><div class="bar"><i style="--w:8%"></i></div><strong>≈50 dólares</strong></div>
+          <div class="price-row"><span>LungTrainer</span><div class="bar"><i class="accent-bar" style="--w:100%"></i></div><strong>499–1.200 dólares</strong></div>
           <small>Precios públicos observados; no son cotizaciones institucionales.</small>
         </div>
       </div>
     </section>
 
-    <section class="section strategy" id="estrategia">
+    <section class="section strategy" id="estrategia" data-slide data-title="Dirección comercial">
       <div class="section-heading split-heading reveal">
         <div>
           <p class="eyebrow"><span></span> Dirección comercial</p>
@@ -211,7 +219,7 @@
           <span class="step">01</span>
           <p class="step-label">POSICIONAR</p>
           <h3>Una categoría médica clara</h3>
-          <p>Bronquiectasia como entrada; EPOC seleccionada como segunda expansión; otras áreas después de validar producto y mensaje.</p>
+          <p>Bronquiectasia como entrada; EPOC (enfermedad pulmonar obstructiva crónica) seleccionada como segunda expansión; otras áreas después de validar producto y mensaje.</p>
         </article>
         <div class="path-arrow" aria-hidden="true">→</div>
         <article>
@@ -243,7 +251,7 @@
       </div>
     </section>
 
-    <section class="section phases">
+    <section class="section phases" id="prioridades" data-slide data-title="Prioridades">
       <div class="section-heading reveal">
         <p class="eyebrow"><span></span> Prioridades recomendadas</p>
         <h2>Un mercado a la vez. Una razón de compra a la vez.</h2>
@@ -256,7 +264,7 @@
         </article>
         <article class="phase-row">
           <div class="phase-label"><span>2</span><small>EXPANSIÓN</small></div>
-          <div><h3>EPOC seleccionada</h3><p>Gran población y canales existentes, con necesidad de definir quién se beneficia y por qué.</p></div>
+          <div><h3>EPOC (enfermedad pulmonar obstructiva crónica) seleccionada</h3><p>Gran población y canales existentes, con necesidad de definir quién se beneficia y por qué.</p></div>
           <strong>Validar segmento</strong>
         </article>
         <article class="phase-row">
@@ -267,7 +275,7 @@
       </div>
     </section>
 
-    <section class="section next-step" id="proximo-paso">
+    <section class="section next-step" id="proximo-paso" data-slide data-title="Próximo paso">
       <div class="next-step-inner reveal">
         <div>
           <p class="eyebrow"><span></span> La propuesta que sigue</p>
@@ -294,6 +302,27 @@
     <a href="research.html">Fuentes y notas metodológicas</a>
   </footer>
 
-  <script src="script.js"></script>
+  <aside class="slide-index" id="slide-index" aria-hidden="true" aria-label="Índice de la presentación">
+    <div class="index-panel">
+      <div class="index-heading">
+        <div><span>Presentación</span><strong>Ir a una sección</strong></div>
+        <button class="index-close" type="button" aria-label="Cerrar índice">×</button>
+      </div>
+      <div class="index-list"></div>
+      <a class="index-sources" href="research.html">Fuentes y notas metodológicas ↗</a>
+    </div>
+  </aside>
+
+  <nav class="deck-controls" aria-label="Controles de la presentación">
+    <button class="deck-button deck-prev" type="button" aria-label="Pantalla anterior"><span>←</span><small>Anterior</small></button>
+    <div class="deck-status" aria-live="polite">
+      <span class="deck-counter">01 / 09</span>
+      <strong class="deck-title">Oportunidad médica</strong>
+      <i><b></b></i>
+    </div>
+    <button class="deck-button deck-next" type="button" aria-label="Pantalla siguiente"><small>Siguiente</small><span>→</span></button>
+  </nav>
+
+  <script src="script.js?v=3"></script>
 </body>
 </html>

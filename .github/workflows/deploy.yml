@@ -1,0 +1,44 @@
+name: Deploy LungTrainers to Hostinger
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: lungtrainers-production
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the site
+        uses: actions/checkout@v4
+
+      - name: Install deployment client
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      - name: Publish to Hostinger
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          lftp -c "
+            set ftp:ssl-allow no;
+            set net:max-retries 3;
+            set net:timeout 20;
+            open -u \"$FTP_USERNAME\",\"$FTP_PASSWORD\" \"$FTP_SERVER\";
+            mirror --reverse --delete --verbose \
+              --exclude-glob .git* \
+              --exclude-glob .github/ \
+              --exclude-glob .githooks/ \
+              --exclude README.md \
+              ./ ./;
+            bye
+          "

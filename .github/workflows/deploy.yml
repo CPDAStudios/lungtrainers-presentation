@@ -27,7 +27,7 @@ jobs:
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER_IP }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD_DEPLOY }}
         run: |
           lftp -c "
             set ftp:ssl-allow no;

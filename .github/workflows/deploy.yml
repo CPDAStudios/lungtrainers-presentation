@@ -6,10 +6,6 @@ on:
       - main
   workflow_dispatch:
 
-concurrency:
-  group: lungtrainers-production
-  cancel-in-progress: true
-
 permissions:
   contents: read
 
